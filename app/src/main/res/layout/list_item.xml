@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:id="@+id/list_item"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="10dp">
+
+    <ImageView
+        android:id="@+id/imageIG"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/angels"
+        android:padding="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/coverDescription"
+        android:scaleType="centerCrop"
+        android:clickable="true"
+        android:focusable="true" />
+
+    <TextView
+        android:id="@+id/titleTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/placeholder"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/authorTV"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineGD"
+        app:layout_constraintStart_toEndOf="@id/imageIG"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintVertical_bias="0.0"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/authorTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/placeholder"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineGD"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imageIG"
+        app:layout_constraintTop_toBottomOf="@+id/titleTV" />
+
+    <Button
+        android:layout_marginTop="@dimen/margin_5dp"
+        android:id="@+id/wtrBT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/MyButtonStyle"
+        android:text="@string/wtr"
+        app:layout_constraintEnd_toStartOf="@id/xBT"
+        app:layout_constraintStart_toStartOf="@+id/guidelineGD"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RatingBar
+        android:id="@+id/rating"
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@null"
+        android:isIndicator="true"
+        android:numStars="5"
+        android:progressTint="@color/gold"
+
+        android:rating="5.0"
+        android:scaleX="1"
+        android:stepSize="0.5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toEndOf="@id/guidelineGD"
+        app:layout_constraintTop_toBottomOf="@id/wtrBT" />
+    <ImageView
+        android:layout_marginTop="5dp"
+        android:id="@+id/xBT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/xDescription"
+        android:src="@drawable/x"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintStart_toEndOf="@id/wtrBT"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineGD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="270dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+<androidx.drawerlayout.widget.DrawerLayout
+    android:id="@+id/drawerLT"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:openDrawer="start">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            layout="@layout/appbar"
+            android:id="@+id/topBarLT" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/topBarLT" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigationView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:menu="@menu/drawermenu"
+        app:itemIconTint="@color/teal"
+        app:dividerInsetStart="0dp"
+        app:drawerLayoutCornerSize="0dp"
+        app:dividerInsetEnd="0dp"
+        app:dividerColor="@android:color/darker_gray"
+        app:itemTextColor="@color/black"
+        android:background="@color/white"
+        app:headerLayout="@layout/headerdrawer"/>
+</androidx.drawerlayout.widget.DrawerLayout>
+</layout>
